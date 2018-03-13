@@ -6,17 +6,13 @@ import numpy as np
 from PIL import Image
 
 # download synth90k dataset
-os.system("wget http://www.robots.ox.ac.uk/~vgg/data/text/mjsynth.tar.gz")
-os.system("tar -xvzf mjsynth.tar.gz")
+# os.system("wget http://www.robots.ox.ac.uk/~vgg/data/text/mjsynth.tar.gz")
+# os.system("tar -xvzf mjsynth.tar.gz")
 data_path = "./mnt/ramdisk/max/90kDICT32px/"
 
 # read training data
 f = open(data_path + 'annotation_val.txt', 'r')
 x_data = f.readlines()
-f = open(data_path + 'lexicon.txt', 'r')
-y_data = f.readlines()
-f = open(data_path + 'annotation_val.txt', 'r')
-v_data = f.readlines()
 
 data_size = len(x_data)
 word_list = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
@@ -65,4 +61,5 @@ def data_gen():
 
 data_gen()
 print()
+os.system("./propressing_train.py")
 
