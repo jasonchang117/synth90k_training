@@ -35,7 +35,7 @@ x = LSTM(512, return_sequences = True)(x)
 output_word = TimeDistributed(Dense(64, activation = 'softmax'), input_shape = (18, 64))(x)
 recognizer= Model(input_img, output_word)
 
-with open('./models/output_char/Reco_archi.json', 'w') as f:
+with open('./models/Reco_archi.json', 'w') as f:
 	f.write(recognizer.to_json())
 
 print(recognizer.summary())
