@@ -6,8 +6,8 @@ import numpy as np
 from PIL import Image
 
 # download synth90k dataset
-# os.system("wget http://www.robots.ox.ac.uk/~vgg/data/text/mjsynth.tar.gz")
-# os.system("tar -xvzf mjsynth.tar.gz")
+os.system("wget http://www.robots.ox.ac.uk/~vgg/data/text/mjsynth.tar.gz")
+os.system("tar -xvzf mjsynth.tar.gz")
 data_path = "./mnt/ramdisk/max/90kDICT32px/"
 
 # read training data
@@ -62,4 +62,4 @@ def data_gen():
 data_gen()
 print()
 os.system("./propressing_train.py")
-
+os.system("mkdir models")
