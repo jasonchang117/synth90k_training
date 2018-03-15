@@ -16,11 +16,11 @@ Note that you will need about 250GB of free space on your hard disk.
 
 
 ## Train the model
-`build_archi.py`
+`./build_archi.py`
 
 This step will generate the model and then you can start training on the next step.
 
-`train_model.py`
+`./train_model.py`
 
 You are now starting to train the whole model.
 It takes about 18 hours of training time on a single NVIDIA GTX 1060 6GB video card.
